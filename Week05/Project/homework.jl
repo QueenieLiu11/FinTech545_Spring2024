@@ -196,3 +196,4 @@ leftjoin!(risk,risk_n2,on=:Portfolio)
 #    4 │ Total      20468.2   26436.8     13628.1    17086.8      20069.8     25100.5
 
 # The VaR using the unweighted covariance is roughly the same as the new methodology
+# but the ES is larger with the new methodology, as expected
