@@ -154,6 +154,9 @@ covar = ewCovar(Matrix(returns[!,portfolio.Stock]),0.94)
 
 current = prices[size(prices,1),portfolio.Stock]
 
+# simReturns = returns
+# nSim = size(simReturns,1)
+
 nSim = 10000
 sim = simulate_pca(covar,nSim)
 simReturns = DataFrame(sim,portfolio.Stock)

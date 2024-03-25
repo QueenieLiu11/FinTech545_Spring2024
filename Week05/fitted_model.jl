@@ -36,8 +36,8 @@ function fit_regression_t(y,x)
     start_s = sqrt(var(e)*(start_nu-2)/start_nu)
 
     @variable(mle, m, start=start_m)
-    @variable(mle, s>=1e-6, start=1)
-    @variable(mle, nu>=2.0001, start=start_s)
+    @variable(mle, s>=1e-6, start=start_s)
+    @variable(mle, nu>=2.0001, start=start_nu)
     @variable(mle, B[i=1:nB],start=b_start[i])
 
     #Inner function to abstract away the X value
